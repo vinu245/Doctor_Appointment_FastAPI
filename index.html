@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0f766e">
+    <title>MediCare Pulse</title>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" href="/icons/icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="bg-orb orb-a"></div>
+    <div class="bg-orb orb-b"></div>
+
+    <main class="shell">
+        <header class="hero card reveal">
+            <p class="kicker">Clinic Control Panel</p>
+            <h1>MediCare Pulse</h1>
+            <p class="sub">Book appointments, track doctor availability, and monitor bookings from one installable app.</p>
+            <div class="hero-actions">
+                <button id="installBtn" class="btn ghost" hidden>Install App</button>
+                <button id="refreshBtn" class="btn">Refresh Data</button>
+            </div>
+        </header>
+
+        <section class="grid reveal delay-1">
+            <article class="card">
+                <h2>Doctors</h2>
+                <div id="doctorStats" class="meta">Loading...</div>
+                <ul id="doctorList" class="list"></ul>
+            </article>
+
+            <article class="card">
+                <h2>Book Appointment</h2>
+                <form id="bookForm" class="form">
+                    <label>Name
+                        <input name="patient_name" required minlength="2" placeholder="Patient name">
+                    </label>
+                    <label>Doctor ID
+                        <input name="doctor_id" type="number" min="1" required placeholder="1">
+                    </label>
+                    <label>Date
+                        <input name="date" required placeholder="2026-03-22">
+                    </label>
+                    <label>Reason
+                        <input name="reason" required minlength="5" placeholder="Short reason">
+                    </label>
+                    <label>Type
+                        <select name="appointment_type">
+                            <option value="in-person">In person</option>
+                            <option value="video">Video</option>
+                            <option value="emergency">Emergency</option>
+                        </select>
+                    </label>
+                    <label class="check">
+                        <input name="senior_citizen" type="checkbox">
+                        Senior citizen discount
+                    </label>
+                    <button class="btn" type="submit">Create</button>
+                </form>
+                <p id="formMessage" class="meta"></p>
+            </article>
+        </section>
+
+        <section class="card reveal delay-2">
+            <h2>Appointments</h2>
+            <div id="apptStats" class="meta">Loading...</div>
+            <ul id="apptList" class="list"></ul>
+        </section>
+    </main>
+
+    <script src="/app.js"></script>
+</body>
+</html>
