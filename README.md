@@ -18,10 +18,10 @@ The frontend UI helps visualize how FastAPI works in real-time, making it easier
 ## 🎥 Demo Videos
 
 - 🔹 FastAPI API Demo (Swagger UI):  
-  https://your-api-video-link  
+  project_demo.mp4
 
 - 🔹 Frontend UI Demo:  
-  https://your-ui-video-link  
+  Ui_demo.mp4 
 
 ---
 
