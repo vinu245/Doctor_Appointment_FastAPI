@@ -21,7 +21,7 @@ The frontend UI helps visualize how FastAPI works in real-time, making it easier
   project_demo.mp4
 
 - 🔹 Frontend UI Demo:  
-  Ui_demo.mp4 
+  Ui_Working.mp4 
 
 ---
 
